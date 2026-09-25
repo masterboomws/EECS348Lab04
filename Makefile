@@ -1,7 +1,11 @@
 CC=gcc
 
-prog: task1.c task2.c
+all: prog1 prog2
+
+prog1: task1.c
 	$(CC) task1.c -o task1
+
+prog2: task2.c
 	$(CC) task2.c -o task2
 
 clean:
