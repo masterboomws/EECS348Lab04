@@ -6,7 +6,9 @@ int main() {
 		printf("Enter the NFL score (Enter 1 to stop): "); //display message to user
 		scanf("%d", &Score); //user input
 		if (Score == 1) {break;}
-
+		if (Score < 0) {
+			printf("Enter a valid number\n");
+		} else {
 		printf("Possible combinations of scoring plays if a team's score is %d\n", Score);
 
 		int maxTDPlus2 = Score /  8; //find max possible TDs plus 2 points as is possible with provided score
@@ -25,6 +27,7 @@ int main() {
 					}
 				}
 			}
+		}
 		}
 	}
 }
